@@ -3,7 +3,7 @@ package twitter
 import (
 	"net/http"
 
-	"github.com/montanaflynn/sling"
+	"github.com/dghubble/sling"
 )
 
 // FriendshipService provides methods for accessing Twitter friendship API

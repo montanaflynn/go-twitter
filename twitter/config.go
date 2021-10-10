@@ -3,7 +3,7 @@ package twitter
 import (
 	"net/http"
 
-	"github.com/montanaflynn/sling"
+	"github.com/dghubble/sling"
 )
 
 // Config represents the current configuration used by Twitter

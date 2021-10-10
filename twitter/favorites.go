@@ -3,7 +3,7 @@ package twitter
 import (
 	"net/http"
 
-	"github.com/montanaflynn/sling"
+	"github.com/dghubble/sling"
 )
 
 // FavoriteService provides methods for accessing Twitter favorite API endpoints.

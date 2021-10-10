@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/montanaflynn/sling"
+	"github.com/dghubble/sling"
 )
 
 // Tweet represents a Twitter Tweet, previously called a status.

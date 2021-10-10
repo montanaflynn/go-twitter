@@ -3,7 +3,7 @@ package twitter
 import (
 	"net/http"
 
-	"github.com/montanaflynn/sling"
+	"github.com/dghubble/sling"
 )
 
 const twitterAPI = "https://api.twitter.com/1.1/"

@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/cenkalti/backoff"
-	"github.com/montanaflynn/sling"
+	"github.com/dghubble/sling"
 )
 
 const (

@@ -3,7 +3,7 @@ package twitter
 import (
 	"net/http"
 
-	"github.com/montanaflynn/sling"
+	"github.com/dghubble/sling"
 )
 
 // Search represents the result of a Tweet search.

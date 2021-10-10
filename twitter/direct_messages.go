@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/montanaflynn/sling"
+	"github.com/dghubble/sling"
 )
 
 // DirectMessageEvents lists Direct Message events.
