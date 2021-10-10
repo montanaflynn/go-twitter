@@ -34,12 +34,12 @@ func TestUserService_LookupWithIds(t *testing.T) {
 		assertMethod(t, "GET", r)
 		assertQuery(t, map[string]string{"user_id": "113419064,623265148"}, r)
 		w.Header().Set("Content-Type", "application/json")
-		fmt.Fprintf(w, `[{"screen_name": "golang"}, {"screen_name": "dghubble"}]`)
+		fmt.Fprintf(w, `[{"screen_name": "golang"}, {"screen_name": "montanaflynn"}]`)
 	})
 
 	client := NewClient(httpClient)
 	users, _, err := client.Users.Lookup(&UserLookupParams{UserID: []int64{113419064, 623265148}})
-	expected := []User{User{ScreenName: "golang"}, User{ScreenName: "dghubble"}}
+	expected := []User{User{ScreenName: "golang"}, User{ScreenName: "montanaflynn"}}
 	assert.Nil(t, err)
 	assert.Equal(t, expected, users)
 }

@@ -3,7 +3,7 @@ package twitter
 import (
 	"net/http"
 
-	"github.com/dghubble/sling"
+	"github.com/montanaflynn/sling"
 )
 
 // RateLimitService provides methods for accessing Twitter rate limits

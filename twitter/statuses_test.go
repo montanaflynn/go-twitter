@@ -17,13 +17,13 @@ func TestStatusService_Show(t *testing.T) {
 		assertMethod(t, "GET", r)
 		assertQuery(t, map[string]string{"id": "589488862814076930", "include_entities": "false"}, r)
 		w.Header().Set("Content-Type", "application/json")
-		fmt.Fprintf(w, `{"user": {"screen_name": "dghubble"}, "text": ".@audreyr use a DONTREADME file if you really want people to read it :P"}`)
+		fmt.Fprintf(w, `{"user": {"screen_name": "montanaflynn"}, "text": ".@audreyr use a DONTREADME file if you really want people to read it :P"}`)
 	})
 
 	client := NewClient(httpClient)
 	params := &StatusShowParams{ID: 5441, IncludeEntities: Bool(false)}
 	tweet, _, err := client.Statuses.Show(589488862814076930, params)
-	expected := &Tweet{User: &User{ScreenName: "dghubble"}, Text: ".@audreyr use a DONTREADME file if you really want people to read it :P"}
+	expected := &Tweet{User: &User{ScreenName: "montanaflynn"}, Text: ".@audreyr use a DONTREADME file if you really want people to read it :P"}
 	assert.Nil(t, err)
 	assert.Equal(t, expected, tweet)
 }
@@ -255,7 +255,7 @@ func TestStatusService_OEmbed(t *testing.T) {
 		assertQuery(t, map[string]string{"id": "691076766878691329", "maxwidth": "400", "hide_media": "true"}, r)
 		w.Header().Set("Content-Type", "application/json")
 		// abbreviated oEmbed response
-		fmt.Fprintf(w, `{"url": "https://twitter.com/dghubble/statuses/691076766878691329", "width": 400, "html": "<blockquote></blockquote>"}`)
+		fmt.Fprintf(w, `{"url": "https://twitter.com/montanaflynn/statuses/691076766878691329", "width": 400, "html": "<blockquote></blockquote>"}`)
 	})
 
 	client := NewClient(httpClient)
@@ -266,7 +266,7 @@ func TestStatusService_OEmbed(t *testing.T) {
 	}
 	oembed, _, err := client.Statuses.OEmbed(params)
 	expected := &OEmbedTweet{
-		URL:   "https://twitter.com/dghubble/statuses/691076766878691329",
+		URL:   "https://twitter.com/montanaflynn/statuses/691076766878691329",
 		Width: 400,
 		HTML:  "<blockquote></blockquote>",
 	}

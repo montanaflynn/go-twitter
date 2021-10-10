@@ -43,7 +43,7 @@ func TestFriendService_List(t *testing.T) {
 
 	mux.HandleFunc("/1.1/friends/list.json", func(w http.ResponseWriter, r *http.Request) {
 		assertMethod(t, "GET", r)
-		assertQuery(t, map[string]string{"screen_name": "dghubble", "count": "5", "cursor": "1516933260114270762", "skip_status": "true", "include_user_entities": "false"}, r)
+		assertQuery(t, map[string]string{"screen_name": "montanaflynn", "count": "5", "cursor": "1516933260114270762", "skip_status": "true", "include_user_entities": "false"}, r)
 		w.Header().Set("Content-Type", "application/json")
 		fmt.Fprintf(w, `{"users": [{"id": 123}], "next_cursor":1516837838944119498,"next_cursor_str":"1516837838944119498","previous_cursor":-1516924983503961435,"previous_cursor_str":"-1516924983503961435"}`)
 	})
@@ -57,7 +57,7 @@ func TestFriendService_List(t *testing.T) {
 
 	client := NewClient(httpClient)
 	params := &FriendListParams{
-		ScreenName:          "dghubble",
+		ScreenName:          "montanaflynn",
 		Count:               5,
 		Cursor:              1516933260114270762,
 		SkipStatus:          Bool(true),

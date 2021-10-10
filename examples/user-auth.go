@@ -7,8 +7,8 @@ import (
 	"os"
 
 	"github.com/coreos/pkg/flagutil"
-	"github.com/dghubble/go-twitter/twitter"
-	"github.com/dghubble/oauth1"
+	"github.com/montanaflynn/go-twitter/twitter"
+	"github.com/montanaflynn/oauth1"
 )
 
 func main() {

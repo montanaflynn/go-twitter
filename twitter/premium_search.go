@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/dghubble/sling"
+	"github.com/montanaflynn/sling"
 )
 
 // PremiumSearch represents the result of a Tweet search.

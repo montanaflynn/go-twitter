@@ -14,7 +14,7 @@ some example requests.
 	// Status Show
 	tweet, resp, err := client.Statuses.Show(585613041028431872, nil)
 	// User Show
-	params := &twitter.UserShowParams{ScreenName: "dghubble"}
+	params := &twitter.UserShowParams{ScreenName: "montanaflynn"}
 	user, resp, err := client.Users.Show(params)
 	// Followers
 	followers, resp, err := client.Followers.List(&FollowerListParams{})
@@ -26,7 +26,7 @@ Authentication
 
 By design, the Twitter Client accepts any http.Client so user auth (OAuth1) or
 application auth (OAuth2) requests can be made by using the appropriate
-authenticated client. Use the https://github.com/dghubble/oauth1 and
+authenticated client. Use the https://github.com/montanaflynn/oauth1 and
 https://github.com/golang/oauth2 packages to obtain an http.Client which
 transparently authorizes requests.
 
@@ -35,8 +35,8 @@ has granted access, with OAuth1.
 
 	// OAuth1
 	import (
-		"github.com/dghubble/go-twitter/twitter"
-		"github.com/dghubble/oauth1"
+		"github.com/montanaflynn/go-twitter/twitter"
+		"github.com/montanaflynn/oauth1"
 	)
 
 	config := oauth1.NewConfig("consumerKey", "consumerSecret")
@@ -52,7 +52,7 @@ application auth.
 
 	// OAuth2
 	import (
-		"github.com/dghubble/go-twitter/twitter"
+		"github.com/montanaflynn/go-twitter/twitter"
 		"golang.org/x/oauth2"
 		"golang.org/x/oauth2/clientcredentials"
 	)
@@ -69,7 +69,7 @@ application auth.
 	// Twitter client
 	client := twitter.NewClient(httpClient)
 
-To implement Login with Twitter, see https://github.com/dghubble/gologin.
+To implement Login with Twitter, see https://github.com/montanaflynn/gologin.
 
 */
 package twitter

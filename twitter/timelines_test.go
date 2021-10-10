@@ -52,12 +52,12 @@ func TestTimelineService_MentionTimeline(t *testing.T) {
 		assertMethod(t, "GET", r)
 		assertQuery(t, map[string]string{"count": "20", "include_entities": "false"}, r)
 		w.Header().Set("Content-Type", "application/json")
-		fmt.Fprintf(w, `[{"text": "@dghubble can I get verified?"}, {"text": "@dghubble why are gophers so great?"}]`)
+		fmt.Fprintf(w, `[{"text": "@montanaflynn can I get verified?"}, {"text": "@montanaflynn why are gophers so great?"}]`)
 	})
 
 	client := NewClient(httpClient)
 	tweets, _, err := client.Timelines.MentionTimeline(&MentionTimelineParams{Count: 20, IncludeEntities: Bool(false)})
-	expected := []Tweet{Tweet{Text: "@dghubble can I get verified?"}, Tweet{Text: "@dghubble why are gophers so great?"}}
+	expected := []Tweet{Tweet{Text: "@montanaflynn can I get verified?"}, Tweet{Text: "@montanaflynn why are gophers so great?"}}
 	assert.Nil(t, err)
 	assert.Equal(t, expected, tweets)
 }
